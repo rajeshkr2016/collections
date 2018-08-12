@@ -1,0 +1,25 @@
+#!/usr/bin/expect
+
+#Usage remexec.exp <host> <file-to-copy>
+
+
+set PASS [lindex $argv 1]
+
+set timeout 10
+
+log_user 0
+
+set dirname ./tmp
+if {[file exist $dirname]} {
+    # check that it's a directory
+    if {! [file isdirectory $dirname]} {
+        puts "$dirname exists, but it's a file"
+    }
+} else {
+    file mkdir $dirname
+}
+
+#spawn scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no [lindex $argv 0]:[lindex $argv 2] [lindex $argv 3]
+spawn scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no [lindex $argv 0] [lindex $argv 2]
+expect "*?assword" { send "$PASS\r" }
+interact

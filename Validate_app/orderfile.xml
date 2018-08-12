@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ns3:order xmlns:ns2="http://schema.company.com/platform/common/error/v2" xmlns:ns3="http://schema.company.com/platform/order/order/v1">
+    <orderHeader>
+        <orderAmount currency="USD">0.0</orderAmount>
+        <customer>
+            <customerAccount>
+                <accountInfo>
+                    <accountName>xxxx</accountName>
+                    <email>qsedev+iamtestpass_2017-05-10-14-34-39@mail.com</email>
+                    <phone>
+                        <phoneNumber>4085555555</phoneNumber>
+                        <type>CELL</type>
+                    </phone>
+                </accountInfo>
+            </customerAccount>
+            <customerContact>
+                <authId>xxxx</authId>
+                <contactInfo>
+                    <firstName>xxx</firstName>
+                    <lastName>xxx</lastName>
+                    <email>qsedev+iamtestpass_2017-05-10-14-34-39@gmail.com</email>
+                </contactInfo>
+            </customerContact>
+        </customer>
+        <paymentInfo>
+            <cvv>xxx</cvv>
+            <billingAddress>
+                <addressInfo>
+                    <addressLine1>xxxx</addressLine1>
+                    <addressLine2>xxxx</addressLine2>
+                    <city>xxxx</city>
+                    <state>xxx</state>
+                    <postalCode>xxxx</postalCode>
+                    <country>xxx</country>
+                </addressInfo>
+            </billingAddress>
+            <paymentMethod>
+                <creditCard>
+                    <accountType>xxx</accountType>
+                    <accountNumber>xxxxx</accountNumber>
+                    <accountName>xxxx</accountName>
+                    <expirationMonth>xxx</expirationMonth>
+                    <expirationYear>xxxx</expirationYear>
+                </creditCard>
+            </paymentMethod>
+        </paymentInfo>
+    </orderHeader>
+    <orderLines>
+        <orderLine>
+            <offeringId>xxxx</offeringId>
+            <quantity>1</quantity>
+            <unitPrice currency="USD">10.0</unitPrice>
+        </orderLine>
+    </orderLines>
+</ns3:order>
