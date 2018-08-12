@@ -1,3 +1,4 @@
+## Update member pool to enabled or disabled state
 import requests
 import time
 from vipconfig import apikey
