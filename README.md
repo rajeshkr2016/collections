@@ -1,4 +1,4 @@
-# scripts
+# Scripts
 
 Validate_app - To validate Work flows for consistency of business transactions end to end flows.
 
