@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-!/usr/bin/perl -w
-=======
 #!/usr/bin/perl -w
->>>>>>> d6fa8446d49ce9a73de3597bc07ac98822d3ac40
 # Author: Rajesh Radhakrishnan
 # Team: Ops Maintenance and Support
 # rename this file to smtpmail.pl and use it with below syntax.
