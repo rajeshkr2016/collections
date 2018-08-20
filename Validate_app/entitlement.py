@@ -11,15 +11,10 @@ global app_url
 global vald_lic
 vald_lic = ""
 app_req = ""
-<<<<<<< HEAD
 
-def send_req(vald_lic):
-	ticket = ""
-=======
 ticket = ""
 
 def send_req(vald_lic):
->>>>>>> d6fa8446d49ce9a73de3597bc07ac98822d3ac40
 	if not ticket:
 		import ticket_mod
 		ticket=ticket_mod.ticket
