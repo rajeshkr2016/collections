@@ -9,8 +9,7 @@ ec2_regions = [region['RegionName'] for region in client.describe_regions()['Reg
 
 
 for region in ec2_regions:
-    conn = boto3.resource('ec2',
-                   region_name=region)
+    conn = boto3.resource('ec2', region_name=region)
     instances = conn.instances.filter()
     for instance in instances:
          instanceList = []
