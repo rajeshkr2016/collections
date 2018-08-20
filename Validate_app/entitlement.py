@@ -11,9 +11,9 @@ global app_url
 global vald_lic
 vald_lic = ""
 app_req = ""
+ticket = ""
 
 def send_req(vald_lic):
-	ticket = ""
 	if not ticket:
 		import ticket_mod
 		ticket=ticket_mod.ticket
