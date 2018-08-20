@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 !/usr/bin/perl -w
+=======
+#!/usr/bin/perl -w
+>>>>>>> d6fa8446d49ce9a73de3597bc07ac98822d3ac40
 # Author: Rajesh Radhakrishnan
 # Team: Ops Maintenance and Support
 # rename this file to smtpmail.pl and use it with below syntax.
 # pre-requisite of smtpmail. pl
 # - smtpmail.pl wrapper script should be available in the same script directory or in the path mentioned in PATH variable.
+<<<<<<< HEAD
 # - sutuect is mandatory argument to run this script.
 # - Recnpient also mandatory.
 # — support only below 10 MB attachment.
@@ -11,6 +16,15 @@
 # Usage description:
 #- . / smtpmai Imulti.pl —s "sutüect" <recipi corn < msgbody. txt
 #        — echo 'Mail body" I . /smtpmall . pl -s "subject" <recipi ent>@domain. com
+=======
+# - subject is mandatory argument to run this script.
+# - Recipient also mandatory.
+# — support only below 10 MB attachments.
+# - HTML mail supported.
+# Usage description:
+#- . / smtpmail_multi.pl —s "subject" <recipient < msgbody.txt
+#        — echo 'Mail body" |./smtpmall.pl -s "subject" <recipient>@domain. com
+>>>>>>> d6fa8446d49ce9a73de3597bc07ac98822d3ac40
 #        - . / smtpmailmulti . pl -s "subject" -f attachment. txt com
 #        - . / smtpmail.pl -s —f attachment. txt com < msgbody.txt
 #For HTML mail
@@ -20,10 +34,17 @@
 #- ./smtpmail.pl —h —r from-addr@domain. com —s "subject" -f attachment. txt <recipi com < msgbody.txt
 #For CC email/ Add multiple email address with comma seperated for cc.
 #. / smtpmaiIV2.p1 —s "Test MaiV'
+<<<<<<< HEAD
 #—c rajesh@domain. com raj@domain. corn < body provide server name
 #. /smtpmai 1. pl -h —r from-addr@domain. com -m "mailserver. domain. com" -s "subject
 #" -f attachment. txt raj@domain. com
 #echo "Mail body" I . / smtpmail . pl -s "subject" raj@domain. corn raj@domain. corn
+=======
+#—c rajesh@domain. com raj@domain.com < body provide server name
+#. /smtpmai 1. pl -h —r from-addr@domain. com -m "mailserver. domain. com" -s "subject
+#" -f attachment. txt raj@domain. com
+#echo "Mail body" I . / smtpmail.pl -s "subject" raj@domain. corn raj@domain. corn
+>>>>>>> d6fa8446d49ce9a73de3597bc07ac98822d3ac40
 #. /smtpmail.pl -h -r from-addr@domain.com -m mailserver.domain. com" -s "subject" -f attachment. txt -c raj@domain.com < msgbody.txt
 use strict;
 use warnings;
