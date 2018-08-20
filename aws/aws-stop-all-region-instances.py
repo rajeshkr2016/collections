@@ -1,6 +1,7 @@
 import boto3
 import boto3.ec2
 import boto
+import sys
 from boto.ec2.connection import EC2Connection
 
 client = boto3.client('ec2', region_name='us-east-1')
@@ -14,10 +15,9 @@ for region in ec2_regions:
     for instance in instances:
          instanceList = []
          ec2 = boto3.resource( 'ec2', region_name=region)
-         instanceList.append(instance.id)
          #print (instanceList)
-#        if instance.state["Name"] == "running":
+         if instance.state["Name"] == "running":
+              instanceList.append(instance.id)
               status = ec2.instances.filter(InstanceIds=instanceList).stop()
+import aws_get_all_region_instances
          #print (instance.id, status, instance.instance_type, region)
-
-import aws-get-all-region-instances.py
