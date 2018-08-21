@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w
 # Author: Rajesh Radhakrishnan
-# Team: Ops Maintenance and Support
+# Team: DevOps
 # rename this file to smtpmail.pl and use it with below syntax.
 # pre-requisite of smtpmail. pl
 # - smtpmail.pl wrapper script should be available in the same script directory or in the path mentioned in PATH variable.
