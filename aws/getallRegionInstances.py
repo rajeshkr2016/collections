@@ -68,6 +68,6 @@ for region in regions:
                         vpc_name = tag['Value']
                 print('\033[1;32;40m' + vpc_id + ' | ' + vpc_name + ' | ' + vpc['CidrBlock'] + ' (' + count(instances, vpc_id)  + ' ec2 instances, ' + count(dbs, vpc_id) + ' rds instances)\033[0;37;40m')
             if vpc_id in instances:
-                print('\033[1;33;40m    ec2 instances: \033[0;37;40m' + ','.join(instances[vpc_id]))
+                print('\033[1;33;40m    ec2 instances: \033[0;37;40m' + ','.join(instances[vpc_id])+ '\033[1;35;40m VPC ID: \033[0;37;40m' + vpc_id)
             if vpc_id in dbs:
-                print('\033[1;35;40m    rds instances: \033[0;37;40m' + ','.join(dbs[vpc_id]))
+                print('\033[1;35;40m    rds instances: \033[0;37;40m' + ','.join(dbs[vpc_id]) + '\033[1;35;40m VPC ID: \033[0;37;40m' + vpc_id)
