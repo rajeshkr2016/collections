@@ -51,21 +51,23 @@ for region in regions:
             if 'DBSubnetGroup' in db_instance:
                 #print(db_instance)
                 db_vpc = db_instance['DBSubnetGroup']['VpcId']
-                print(db_vpc)
+                #print(db_vpc)
                 if db_vpc in dbs:
                     dbs[db_vpc].append(db_instance['DBInstanceIdentifier'])
                 else:
                     dbs[db_vpc] = [ db_instance['DBInstanceIdentifier'] ]
-
+            #print(dbs[db_vpc])
         vpcs = ec2client.describe_vpcs()
+        #print(vpcs)
         for vpc in vpcs['Vpcs']:
-            if vpc['IsDefault'] == False:
-                vpc_id = vpc['VpcId']
+            #if vpc['IsDefault'] == False:
+            vpc_id = vpc['VpcId']
+            if 'Tags' in dict.keys(vpc):
                 for tag in vpc['Tags']:
                     if tag['Key'] == "Name":
                         vpc_name = tag['Value']
                 print('\033[1;32;40m' + vpc_id + ' | ' + vpc_name + ' | ' + vpc['CidrBlock'] + ' (' + count(instances, vpc_id)  + ' ec2 instances, ' + count(dbs, vpc_id) + ' rds instances)\033[0;37;40m')
-                if vpc_id in instances:
-                    print('\033[1;33;40m    ec2 instances: \033[0;37;40m' + ','.join(instances[vpc_id]))
-                if vpc_id in dbs:
-                    print('\033[1;35;40m    rds instances: \033[0;37;40m' + ','.join(dbs[vpc_id]))
+            if vpc_id in instances:
+                print('\033[1;33;40m    ec2 instances: \033[0;37;40m' + ','.join(instances[vpc_id]))
+            if vpc_id in dbs:
+                print('\033[1;35;40m    rds instances: \033[0;37;40m' + ','.join(dbs[vpc_id]))
