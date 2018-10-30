@@ -8,8 +8,8 @@ session = boto3.Session()
 regions = session.get_available_regions('ec2')
 
 for region in regions:
-    # if (region!='us-west-2'):
-    #     continue
+    if (region!='us-west-2'):
+        continue
     print("Region: " + region)
 
     ec2client = session.client('ec2', region)
@@ -19,12 +19,15 @@ for region in regions:
     dbs = {}
 
     ec2_instances = ec2client.describe_instances(Filters=[ { 'Name': 'instance-state-name', 'Values': [ 'running' ] } ])
+    #ec2_instances = ec2client.describe_instances()
+    #print(ec2_instances)
     for reservation in ec2_instances['Reservations']:
         for instance in reservation['Instances']:
             instance_name =	instance['InstanceId']
-        for tag in instance['Tags']:
-            if tag['Key'] == 'Name':
-                instance_name =	instance['InstanceId'] + ' (' +	tag['Value'] + ')'
+        if 'Tags' in dict.keys(instance):
+            for tag in instance['Tags']:
+                if tag['Key'] == 'Name':
+                    instance_name =	instance['InstanceId'] + ' (' +	tag['Value'] + ')'
         if instance['VpcId'] in instances:
                 instances[instance['VpcId']].append(instance_name)
         else:
