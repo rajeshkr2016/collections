@@ -6,4 +6,3 @@ ansible playbooks/ scripts - Automate tasks to setup virtual machines or cloud i
 
 smtpmail.pl - mailx alternative program in perl for adhering to security compliance.
 
-### test check
