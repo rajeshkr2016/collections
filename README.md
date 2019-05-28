@@ -1,12 +1,8 @@
-# Scripts
+# Collections
 
-Validate_app - To validate Work flows for consistency of business transactions end to end flows.
+Python - A set of python programs written to automate work.
 
-ansible scripts - Automate tasks to setup virtual machines or cloud instances.
-
-check_dbsync - DB replication and consistancy state checks.
-
-remdiff - Validate an Application for Deployment and configuration files.
+ansible playbooks/ scripts - Automate tasks to setup virtual machines or cloud instances.
 
 smtpmail.pl - mailx alternative program in perl for adhering to security compliance.
 
