@@ -26,7 +26,7 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host}"
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A 
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A
 #echo "---------------------------"
 #echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
 #./remdiffapp.sh -t ${TGTHOST} -c ${host} -M
@@ -46,7 +46,7 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host} "
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A
 #echo "---------------------------"
 #echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
 #./remdiffapp.sh -t ${TGTHOST} -c ${host} -M
@@ -63,7 +63,7 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host}"
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
 #echo "---------------------------"
 #echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
 #./remdiffapp.sh -t ${TGTHOST} -c ${host} -T
@@ -80,7 +80,7 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host}"
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
 #echo "---------------------------"
 #echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
 #./remdiffapp.sh -t ${TGTHOST} -c ${host} -T
@@ -97,7 +97,7 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host}"
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
 #echo "---------------------------"
 #echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
 #./remdiffapp.sh -t ${TGTHOST} -c ${host} -T

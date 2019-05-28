@@ -4,7 +4,7 @@
 
 #
 #
-. ./env.sh
+. env.sh
 
 DBSRV="server2.ie.company.net"
 export DBSRV

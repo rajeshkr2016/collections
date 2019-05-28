@@ -1,9 +1,10 @@
 #!/bin/bash
+# Compare e2e cluster group nodes
 
-POD3Mlist="pqalmulea3300.corp-company.net,pqalmulea3301.corp-company.net"
-POD4Mlist="pqalmulea4300.corp-company.net,pqalmulea4301.corp-company.net"
+POD3Mlist="pe2emulea3300.corp-company.net,pe2emulea3301.corp-company.net"
+POD4Mlist="pe2emulea4300.corp-company.net,pe2emulea4301.corp-company.net"
 
-POD1Tlist="pqalcommas301.corp-company.net,pqalcommas302.corp-company.net"
+POD1Tlist="psyscommas301.corp-company.net,psyscommas302.corp-company.net"
 #POD4Tlist="
 
 IFS=","
@@ -13,10 +14,10 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host}"
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A 
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A
 echo "---------------------------"
 echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
-./remdiffapp.sh -t ${TGTHOST} -c ${host} -M
+remdiffapp.sh -t ${TGTHOST} -c ${host} -M
 echo "---------------------------"
 fi
 TGTHOST=$host
@@ -33,10 +34,10 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host} "
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A
 echo "---------------------------"
 echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
-./remdiffapp.sh -t ${TGTHOST} -c ${host} -M
+remdiffapp.sh -t ${TGTHOST} -c ${host} -M
 echo "---------------------------"
 fi
 TGTHOST=$host
@@ -50,10 +51,10 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host}"
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
 echo "---------------------------"
 echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
-./remdiffapp.sh -t ${TGTHOST} -c ${host} -T
+remdiffapp.sh -t ${TGTHOST} -c ${host} -T
 echo "---------------------------"
 fi
 TGTHOST=$host
@@ -67,10 +68,10 @@ do
 #CMPHOST=$host
 if [ -n "${TGTHOST}" ]; then
 echo "Comparing Configuration Files ${TGTHOST} <=> ${host}"
-./remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
+remdiff-conf.sh -t ${TGTHOST} -c ${host} -A -T
 echo "---------------------------"
 echo "Comparing App Versions and directory structure ${TGTHOST} <=> ${host}"
-./remdiffapp.sh -t ${TGTHOST} -c ${host} -T
+remdiffapp.sh -t ${TGTHOST} -c ${host} -T
 echo "---------------------------"
 fi
 TGTHOST=$host
